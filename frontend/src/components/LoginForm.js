@@ -1,4 +1,8 @@
+import React from "react";
+
 const LoginForm = () => {
+
+  console.log("Hello");
 
   return (
     <form>
