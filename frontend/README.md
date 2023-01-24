@@ -1,14 +1,27 @@
-# Getting Started with Create React App
+# Tree Node Project Beta
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Beta project that starts with a "root" factory and the user manually generates an unlimited amount of child node factories. Those child factories can in turn generate a set of up to 15 random numbers.\
+Site not currently published, you will need to fork the code and play around with it on localhost.
 
-## Available Scripts
+## Current Features
 
-In the project directory, you can run:
+-A child generator where when the "Generate Child" button is clicked, will generate a random number of 0-15 children within a factory
+
+-A factory generator where when the "+ Add Factory" button is clicked, will generate a single factory. Button can be clicked as many time as wanted. Will also generate setting buttons with each factory but these are not currently active.
+
+-Backend can be accessed by going to `localhost:8080` in your browser when running backend.
+-`localhost:8080` or `localhost:8080/` will return "You have reached 8080 homebase"
+-`localhost:8080/login` will return "You have reached /login"
+-`localhost:8080/login/fetchLogin` will return "You have reached /login/fetchLogin"
+
+## Root Directory Scripts
+
+In the project root folder, you can run:
 
 ### `npm run dev`
 
 When run within root folder, runs backend and frontend concurrently using "concurrently" npm package.\
+Backend server set to run on port 8080.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you save changes on frontend or backend using nodemon.\
@@ -16,63 +29,43 @@ You may also see any lint errors in the console.
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Changes directory into the frontend folder and opens the  app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Frontend Folder Scripts
 
-### `npm run build`
+In the project frontend folder, you can run:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Opens the  app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Backend Folder Scripts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In the project backend folder, you can run:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `npm run dev`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Starts the server on port 8080.\
+Uses "nodemon" npm package to automatically stop and restart the server.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Learn More
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Starts the server on port 8080.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The page doesn't reload, you'll need to stop and start server again.\
+You may also see any lint errors in the console.
