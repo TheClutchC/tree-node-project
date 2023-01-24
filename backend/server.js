@@ -2,6 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require("mongoose");
 
+/* 
+Server not properly connected to MongoDB or 100% 
+communinicating with frontend, needs to be evaluated further. -CC 1/22/23
+*/
+
 const connection = mongoose.connect("mongodb://localhost:27018/tree-node-project", {
   useNewUrlParser: true,
   useUnifiedTopology: true

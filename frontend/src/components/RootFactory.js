@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 
-// I need to incorporate if statements that perform an 
-// action based on the state of a factory, if it exists or not, if
-// it has children, etc.
+/* 
+I need to incorporate if statements that perform an 
+action based on the state of a factory, if it exists or not, if
+it has children, etc. -CC 1/22/2023
+
+I need to also add state persistence, probably redux but research other options. -CC 1/23/2023
+*/
 
 function RootFactory() {
   const [factories, setFactories] = useState([{name: "Factory 1", numbers: []}]);
