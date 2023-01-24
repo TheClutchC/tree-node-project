@@ -1,12 +1,34 @@
 const express = require('express');
 const cors = require('cors');
+const mongoose = require("mongoose");
+
+const connection = mongoose.connect("mongodb://localhost:27018/tree-node-project", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+connection
+  .then(() => {
+    console.log("MongoDB connected successfully");
+  })
+  .catch(err => console.error(err));
 
 const app = express();
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send("You have reached 8080 homebase");
+  console.log(req);
+});
+
+app.get('/login', (req, res) => {
+  res.send("You have reached /login");
+  console.log(req);
+});
+
 app.get('/login/fetchLogin', (req, res) => {
-  res.send("Send Whatever");
+  res.send("You have reached /login/fetchLogin");
   console.log(req);
 });
 
