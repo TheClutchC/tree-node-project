@@ -9,19 +9,19 @@ Site not currently published, you will need to fork the code and play around wit
 
 -A factory generator where when the "+ Add Factory" button is clicked, will generate a single factory. Button can be clicked as many time as wanted. Will also generate setting buttons with each factory but these are not currently active.
 
--Backend can be accessed by going to `localhost:8080` in your browser when running backend.
--`localhost:8080` or `localhost:8080/` will return "You have reached 8080 homebase"
--`localhost:8080/login` will return "You have reached /login"
--`localhost:8080/login/fetchLogin` will return "You have reached /login/fetchLogin"
+-Backend can be accessed by going to `localhost:7000` in your browser when running backend.
+-`localhost:7000` or `localhost:7000/` will return "Server Running"
+-`localhost:7000/login` will return "Login Page"
+-`localhost:7000/login/fetchLogin` will return "Register New User"
 
 ## Root Directory Scripts
 
 In the project root folder, you can run:
 
-### `npm run dev`
+### `npm run both`
 
 When run within root folder, runs backend and frontend concurrently using "concurrently" npm package.\
-Backend server set to run on port 8080.\
+Backend server set to run on port 7000.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you save changes on frontend or backend using nodemon.\
@@ -55,7 +55,7 @@ In the project backend folder, you can run:
 
 ### `npm run dev`
 
-Starts the server on port 8080.\
+Starts the server on port 7000.\
 Uses "nodemon" npm package to automatically stop and restart the server.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -64,7 +64,7 @@ You may also see any lint errors in the console.
 
 ### `npm start`
 
-Starts the server on port 8080.\
+Starts the server on port 7000.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page doesn't reload, you'll need to stop and start server again.\
