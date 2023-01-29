@@ -1,12 +1,18 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-require('dotenv').config();
+const dotenv = require('dotenv');
 
-mongoose.set('strictQuery', false); // Fixes warning about pending change in Mongoose 7
+dotenv.config({ path: "./config/config.env" });
 
-const connection = mongoose.connect(process.env.DATABASE_URL || "mongodb://localhost/tree-node-project", {
-  useNewUrlParser: true
+// Fixes warning about pending change in Mongoose 7
+mongoose.set('strictQuery', false);
+
+mongoose.Promise = global.Promise;
+
+const connection = mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 connection
@@ -34,6 +40,6 @@ const userRouter = require("./routes/users");
 
 app.use("/login", userRouter);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 666;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

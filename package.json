@@ -2,7 +2,7 @@
   "name": "root",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "concurrently \"cd backend  && npm run dev\" \"cd frontend  && npm start",
     "start": "cd frontend && npm start"

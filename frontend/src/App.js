@@ -7,7 +7,6 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/" exact component={HomePage} /> */}
         <Route path="/login" component={LoginForm} />
         <Route path="/" exact element={<HomePage/>} />
       </Routes>
