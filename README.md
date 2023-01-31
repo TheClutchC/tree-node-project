@@ -11,8 +11,9 @@ Site not currently published, you will need to fork the code and play around wit
 
 -Backend can be accessed by going to `localhost:7000` in your browser when running backend.
 -`localhost:7000` or `localhost:7000/` will return "Server Running"
--`localhost:7000/login` will return "Login Page"
--`localhost:7000/login/fetchLogin` will return "Register New User"
+-`localhost:7000/users` will return "Users"
+-`localhost:7000/users/login` will return "Login User"
+-`localhost:7000/users/register` will return "Register New User"
 
 ## Root Directory Scripts
 
