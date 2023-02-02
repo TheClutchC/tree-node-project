@@ -9,10 +9,11 @@ Site not currently published, you will need to fork the code and play around wit
 
 -A factory generator where when the "+ Add Factory" button is clicked, will generate a single factory. Button can be clicked as many time as wanted. Will also generate setting buttons with each factory but these are not currently active.
 
--Backend can be accessed by going to `localhost:7000` in your browser when running backend.
--`localhost:7000` or `localhost:7000/` will return "Server Running"
--`localhost:7000/login` will return "Login Page"
--`localhost:7000/login/fetchLogin` will return "Register New User"
+-Backend can be accessed by going to `localhost:7000` in your browser when running backend.\
+-`localhost:7000` or `localhost:7000/` will return "Server Running"\
+-`localhost:7000/users` will return "Users"\
+-`localhost:7000/users/login` will return "Login User"\
+-`localhost:7000/users/register` will return "Register New User"\
 
 ## Root Directory Scripts
 
