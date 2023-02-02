@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const dotenv = require('dotenv');
-const userRouter = require("./src/routes/users");
 const connectDB = require("./config/db.js");
+const indexRouter = require("./src/routes/indexRouter");
+const usersRouter = require("./src/routes/usersRouter");
 
 dotenv.config({ path: "./config/config.env" });
 
@@ -14,12 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-  res.json({ message: "Server Running" });
-  console.log(req);
-});
-
-app.use("/login", userRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 
 const port = process.env.PORT || 666;
 
