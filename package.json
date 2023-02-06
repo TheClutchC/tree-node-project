@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "both": "concurrently \"cd backend  && npm run dev\" \"cd frontend  && npm start",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm start",
     "start": "cd frontend && npm start"
   },
   "keywords": [],

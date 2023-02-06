@@ -15,8 +15,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
+app.use(loggingMiddleware);
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+
+function loggingMiddleware(req, res, next) {
+  console.log(`${new Date().toISOString()}: ${req.originalUrl}`);
+  next();
+}
 
 const port = process.env.PORT || 666;
 
