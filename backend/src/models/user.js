@@ -6,16 +6,16 @@ const UserSchema = new Schema({
     type: String, 
     unique: true, 
     required: true, 
-    maxLength: 20
+    maxLength: 16,
+    minLength: 8,
+    admin: Boolean
   },
   password: {
     type: String,
     required: true
-  },
-  admin: {
-    type: Boolean,
-    
-  }
+  } 
+}, {
+  timestamps: true
 });
 
 module.exports = User = mongoose.model('users', UserSchema);
