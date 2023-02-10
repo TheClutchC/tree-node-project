@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactTree from "../components/ReactTree";
 import { Button } from "@mui/material";
 import tree from "../shared/tree";
@@ -9,12 +9,12 @@ const randomChildCount = (max) => {
 }
 
 const createChild = (index) => {
-  console.log({ nodeId: index + 50, label: `Child: ${index}` });
-  return { nodeId: index + 50, label: `Child: ${index}` };
+  console.log({ nodeId: index + 0, label: `Child: ${index}` });
+  return { nodeId: index + 0, label: `Child: ${index}` };
 }
 
 const generateChildren = () => {
-  const numberOfChildren = randomChildCount(15);
+  const numberOfChildren = randomChildCount(6, 9);
   let childArray = [];
   for (let i = 1; i <= numberOfChildren; i++) {
     const newChild = createChild(i);
@@ -25,6 +25,7 @@ const generateChildren = () => {
 
 const HomePage = () => {
   const [treeData, setTreeData] = useState(tree);
+  const [data, setData] = useState();
 
   const updateTreeState = (updateTree) => {
     let newTreeData = [...updateTree];
@@ -34,13 +35,22 @@ const HomePage = () => {
   }
   console.log({ treeData });
 
+  useEffect(() => {
+    fetch(`/api`)
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
+
   return (
     <>
+    <div className="HomePage">
       <ReactTree displayTree={treeData} />
       <Button onClick={ () => {updateTreeState(treeData)} }>
         Generate Child
       </Button>
       <RootFactory />
+      <p>{data}</p>
+    </div>
     </>
   );
 }
