@@ -1,14 +1,10 @@
 const express = require('express');
 const usersRouter = express.Router();
 
-// Routes files help breakup the server.js 
-// file into smaller chunks instead of
-// having every possible route in one file
-
 const authorizeUsersAccess = (req, res, next) => {
   if (req.query.admin === 'true') {
     req.admin = true;
-    next();
+    return next();
   } else {
     res.send('ERROR: You must be an admin');
   }
@@ -16,17 +12,17 @@ const authorizeUsersAccess = (req, res, next) => {
 
 usersRouter.get('/', authorizeUsersAccess, (req, res) => {
   res.json({  message: "Users" });
-  console.log(req.admin);
+  console.log("Hitting /users");
 });
 
 usersRouter.get('/login', (req, res) => {
   res.json({  message: "Login User" });
-  console.log(req);
+  console.log("Hitting /users/login");
 });
 
 usersRouter.get('/register', (req, res) => {
   res.json({  message: "Register New User" });
-  console.log(req);
+  console.log("Hitting /users/register");
 });
 
 module.exports = usersRouter;
